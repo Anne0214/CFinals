@@ -323,7 +323,7 @@
     .nav-notification {
         width: 400px;
         height: 400px;
-        border: 1px solid gray;
+        /* border: 1px solid gray; */
         padding: 0;
     }
     
@@ -358,7 +358,7 @@
         font-size: 1.1rem;
         font-weight: 550;
         color: var(--dark);
-        border-bottom: 1px solid gray;
+
     }
     
     .nav-notification-tab li {
@@ -372,7 +372,9 @@
         color: var(--orange);
     }
     
-    .nav-notification-article {
+    .nav-notification-article,
+    .nav-notification-progress,
+    .nav-notification-new {
         padding: 15px 20px;
     }
     
@@ -387,7 +389,9 @@
         border-radius: 5px;
     }
     
-    .nav-notification-article:hover {
+    .nav-notification-article:hover,
+    .nav-notification-progress:hover,
+    .nav-notification-new:hover {
         background-color: var(--gray);
         transition-duration: 400ms;
     }
@@ -395,3 +399,17 @@
     .nav-notification-article div {
         width: 200px;
     }
+
+
+.nav-notification-progress img{
+    width:80px;
+    border-radius:5px;
+}
+.nav-notification-new img{
+    width:100px;
+    border-radius:5px;
+}
+.nav-notification-progress div,
+.nav-notification-new div{
+    width:240px;
+}

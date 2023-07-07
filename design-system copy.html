@@ -83,14 +83,153 @@
 
                 </div>
             </li>
-            <li>
-                <a href="#">
+            <li class="dropdown">
+                <a href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                     <i class="fa-solid fa-bell fa-xl ">
                     <span class="position-absolute p-1 translate-middle bg-danger border border-light rounded-circle ">
-                    <span class="visually-hidden ">New alerts</span>
+                    <span class="visually-hidden">New alerts</span>
                   </span>
                 </i>
                 </a>
+                <div class="nav-notification dropdown-menu">
+                    <!--通知-->
+                    <ul class="list-unstyled d-flex justify-content-between align-items-center  nav-notification-tab">
+                        <li class="active flex-fill">購物</li>
+                        <li class="flex-fill">關注</li>
+                        <li class="flex-fill">互動</li>
+                    </ul>
+                    <div id="notification-follow"class="nav-notification-content no-display ">
+                        <a href="#">
+                            <div class="d-flex justify-content-between align-items-center nav-notification-article">
+                                <img src="Images/core-images/profile.jpg" alt="頭貼">
+                                <div>
+                                    <span style="color:rgb(135, 135, 135);font-size:0.9rem;">深夜熊貓</span>
+                                    <br>
+                                    <span style="font-weight:550;">【家常菜】番茄蛋花湯</span> <br>
+                                    <span style="color:rgb(168, 168, 168);font-size:0.9rem;">一週前</span>
+                                </div>
+                                <img src="https://imageproxy.icook.network/resize?background=255%2C255%2C255&nocrop=true&stripmeta=true&type=auto&url=http%3A%2F%2Ftokyo-kitchen.icook.tw.s3.amazonaws.com%2Fuploads%2Frecipe%2Fcover%2F440879%2Ff537250f58a663ea.jpg&width=443" alt="食譜圖"
+                                />
+                            </div>
+                        </a>
+                        <a href="#">
+                            <div class="d-flex justify-content-between align-items-center nav-notification-article">
+                                <img src="Images/core-images/profile.jpg" alt="頭貼">
+                                <div>
+                                    <span style="color:rgb(135, 135, 135);font-size:0.9rem;">深夜熊貓</span>
+                                    <br>
+                                    <span style="font-weight:550;">【家常菜】番茄蛋花湯</span> <br>
+                                    <span style="color:rgb(168, 168, 168);font-size:0.9rem;">一週前</span>
+                                </div>
+                                <img src="https://imageproxy.icook.network/resize?background=255%2C255%2C255&nocrop=true&stripmeta=true&type=auto&url=http%3A%2F%2Ftokyo-kitchen.icook.tw.s3.amazonaws.com%2Fuploads%2Frecipe%2Fcover%2F440879%2Ff537250f58a663ea.jpg&width=443" alt="食譜圖"
+                                />
+                            </div>
+                        </a>
+                        <a href="#">
+                            <div class="d-flex justify-content-between align-items-center nav-notification-article">
+                                <img src="Images/core-images/profile.jpg" alt="頭貼">
+                                <div>
+                                    <span style="color:rgb(135, 135, 135);font-size:0.9rem;">深夜熊貓</span>
+                                    <br>
+                                    <span style="font-weight:550;">【家常菜】番茄蛋花湯</span> <br>
+                                    <span style="color:rgb(168, 168, 168);font-size:0.9rem;">一週前</span>
+                                </div>
+                                <img src="https://imageproxy.icook.network/resize?background=255%2C255%2C255&nocrop=true&stripmeta=true&type=auto&url=http%3A%2F%2Ftokyo-kitchen.icook.tw.s3.amazonaws.com%2Fuploads%2Frecipe%2Fcover%2F440879%2Ff537250f58a663ea.jpg&width=443" alt="食譜圖"
+                                />
+                            </div>
+                        </a>
+                        <a href="#">
+                            <div class="d-flex justify-content-between align-items-center nav-notification-article">
+                                <img src="Images/core-images/profile.jpg" alt="頭貼">
+                                <div>
+                                    <span style="color:rgb(135, 135, 135);font-size:0.9rem;">深夜熊貓</span>
+                                    <br>
+                                    <span style="font-weight:550;">【家常菜】番茄蛋花湯</span> <br>
+                                    <span style="color:rgb(168, 168, 168);font-size:0.9rem;">一週前</span>
+                                </div>
+                                <img src="https://imageproxy.icook.network/resize?background=255%2C255%2C255&nocrop=true&stripmeta=true&type=auto&url=http%3A%2F%2Ftokyo-kitchen.icook.tw.s3.amazonaws.com%2Fuploads%2Frecipe%2Fcover%2F440879%2Ff537250f58a663ea.jpg&width=443" alt="食譜圖"
+                                />
+                            </div>
+                        </a>
+                    </div>
+                    <div id="notification-shopping" class="nav-notification-content">
+                        <!-- 購物 -->
+                        <a href="#">
+                            <div class="d-flex justify-content-between align-items-center nav-notification-progress ">
+                                <div>
+                                    <span style="font-weight:550;">您的訂單222222已送達 711大安門市，請於指定期限內領取</span><br>
+                                    <span style="color:rgb(168, 168, 168);font-size:0.9rem;">一週前</span>
+                                </div>
+                                <img src="images/core-images/cart-img.jpg" alt="商品圖"/>
+                            </div>
+                        </a>
+                        <a href="#">
+                            <div class="d-flex justify-content-between align-items-center nav-notification-progress ">
+                                <div>
+                                    <span style="font-weight:550;">您的訂單222222已寄出，可至會員中心確認包裹寄送狀態</span><br>
+                                    <span style="color:rgb(168, 168, 168);font-size:0.9rem;">一週前</span>
+                                </div>
+                                <img src="images/core-images/cart-img.jpg" alt="商品圖"/>
+                            </div>
+                        </a>
+                        <a href="#">
+                            <div class="d-flex justify-content-between align-items-center nav-notification-progress ">
+                                <div>
+                                    <span style="font-weight:550;">已收到您的訂單222222，可至會員中心確認訂單狀態</span><br>
+                                    <span style="color:rgb(168, 168, 168);font-size:0.9rem;">一週前</span>
+                                </div>
+                                <img src="images/core-images/cart-img.jpg" alt="商品圖"/>
+                            </div>
+                        </a>
+                        <a href="#">
+                            <div class="d-flex justify-content-between align-items-center nav-notification-progress ">
+                                <div>
+                                    <span style="font-weight:550;">您的訂單222222已送達 711大安門市，請於指定期限內領取</span><br>
+                                    <span style="color:rgb(168, 168, 168);font-size:0.9rem;">一週前</span>
+                                </div>
+                                <img src="images/core-images/cart-img.jpg" alt="商品圖"/>
+                            </div>
+                        </a>
+                    </div>
+                    <div id="notification-new" class="nav-notification-content no-display">
+                        <a href="#">
+                            <div class="d-flex justify-content-between align-items-center nav-notification-new">
+                                <div>
+                                    <span style="font-weight:550;">您的食譜 「《家常菜》番茄蛋花湯」收到了新的留言 ! </span><br>
+                                    <span style="color:rgb(168, 168, 168);font-size:0.9rem;">一週前</span>
+                                </div>
+                                <img src="https://imageproxy.icook.network/resize?background=255%2C255%2C255&nocrop=true&stripmeta=true&type=auto&url=http%3A%2F%2Ftokyo-kitchen.icook.tw.s3.amazonaws.com%2Fuploads%2Frecipe%2Fcover%2F440879%2Ff537250f58a663ea.jpg&width=443" alt="食譜圖"/>
+                            </div>
+                         </a>
+                         <a href="#">
+                            <div class="d-flex justify-content-between align-items-center nav-notification-new">
+                                <div>
+                                    <span style="font-weight:550;">您的食譜 「《家常菜》番茄蛋花湯」收到了新的留言 ! </span><br>
+                                    <span style="color:rgb(168, 168, 168);font-size:0.9rem;">一週前</span>
+                                </div>
+                                <img src="https://imageproxy.icook.network/resize?background=255%2C255%2C255&nocrop=true&stripmeta=true&type=auto&url=http%3A%2F%2Ftokyo-kitchen.icook.tw.s3.amazonaws.com%2Fuploads%2Frecipe%2Fcover%2F440879%2Ff537250f58a663ea.jpg&width=443" alt="食譜圖"/>
+                            </div>
+                         </a>
+                         <a href="#">
+                            <div class="d-flex justify-content-between align-items-center nav-notification-new">
+                                <div>
+                                    <span style="font-weight:550;">您的食譜 「《家常菜》番茄蛋花湯」收到了新的留言 ! </span><br>
+                                    <span style="color:rgb(168, 168, 168);font-size:0.9rem;">一週前</span>
+                                </div>
+                                <img src="https://imageproxy.icook.network/resize?background=255%2C255%2C255&nocrop=true&stripmeta=true&type=auto&url=http%3A%2F%2Ftokyo-kitchen.icook.tw.s3.amazonaws.com%2Fuploads%2Frecipe%2Fcover%2F440879%2Ff537250f58a663ea.jpg&width=443" alt="食譜圖"/>
+                            </div>
+                         </a>
+                         <a href="#">
+                            <div class="d-flex justify-content-between align-items-center nav-notification-new">
+                                <div>
+                                    <span style="font-weight:550;">您的食譜 「《家常菜》番茄蛋花湯」收到了新的留言 ! </span><br>
+                                    <span style="color:rgb(168, 168, 168);font-size:0.9rem;">一週前</span>
+                                </div>
+                                <img src="https://imageproxy.icook.network/resize?background=255%2C255%2C255&nocrop=true&stripmeta=true&type=auto&url=http%3A%2F%2Ftokyo-kitchen.icook.tw.s3.amazonaws.com%2Fuploads%2Frecipe%2Fcover%2F440879%2Ff537250f58a663ea.jpg&width=443" alt="食譜圖"/>
+                            </div>
+                         </a>
+                    </div>
+                </div>
             </li>
         </ul>
     </nav>
@@ -104,7 +243,7 @@
                     <li class="flex-fill">關注</li>
                     <li class="flex-fill">互動</li>
                 </ul>
-                <div class="nav-notification-content">
+                <div id="notification-follow"class="nav-notification-content no-display ">
                     <a href="#">
                         <div class="d-flex justify-content-between align-items-center nav-notification-article">
                             <img src="Images/core-images/profile.jpg" alt="頭貼">
@@ -158,8 +297,83 @@
                         </div>
                     </a>
                 </div>
-                <div class="nav-notification-content no-display"></div>
-                <div class="nav-notification-content no-display"></div>
+                <div id="notification-shopping" class="nav-notification-content">
+                    <!-- 購物 -->
+                    <a href="#">
+                        <div class="d-flex justify-content-between align-items-center nav-notification-progress ">
+                            <div>
+                                <span style="font-weight:550;">您的訂單222222已送達 711大安門市，請於指定期限內領取</span><br>
+                                <span style="color:rgb(168, 168, 168);font-size:0.9rem;">一週前</span>
+                            </div>
+                            <img src="images/core-images/cart-img.jpg" alt="商品圖"/>
+                        </div>
+                    </a>
+                    <a href="#">
+                        <div class="d-flex justify-content-between align-items-center nav-notification-progress ">
+                            <div>
+                                <span style="font-weight:550;">您的訂單222222已寄出，可至會員中心確認包裹寄送狀態</span><br>
+                                <span style="color:rgb(168, 168, 168);font-size:0.9rem;">一週前</span>
+                            </div>
+                            <img src="images/core-images/cart-img.jpg" alt="商品圖"/>
+                        </div>
+                    </a>
+                    <a href="#">
+                        <div class="d-flex justify-content-between align-items-center nav-notification-progress ">
+                            <div>
+                                <span style="font-weight:550;">已收到您的訂單222222，可至會員中心確認訂單狀態</span><br>
+                                <span style="color:rgb(168, 168, 168);font-size:0.9rem;">一週前</span>
+                            </div>
+                            <img src="images/core-images/cart-img.jpg" alt="商品圖"/>
+                        </div>
+                    </a>
+                    <a href="#">
+                        <div class="d-flex justify-content-between align-items-center nav-notification-progress ">
+                            <div>
+                                <span style="font-weight:550;">您的訂單222222已送達 711大安門市，請於指定期限內領取</span><br>
+                                <span style="color:rgb(168, 168, 168);font-size:0.9rem;">一週前</span>
+                            </div>
+                            <img src="images/core-images/cart-img.jpg" alt="商品圖"/>
+                        </div>
+                    </a>
+                </div>
+                <div id="notification-new" class="nav-notification-content no-display">
+                    <a href="#">
+                        <div class="d-flex justify-content-between align-items-center nav-notification-new">
+                            <div>
+                                <span style="font-weight:550;">您的食譜 「《家常菜》番茄蛋花湯」收到了新的留言 ! </span><br>
+                                <span style="color:rgb(168, 168, 168);font-size:0.9rem;">一週前</span>
+                            </div>
+                            <img src="https://imageproxy.icook.network/resize?background=255%2C255%2C255&nocrop=true&stripmeta=true&type=auto&url=http%3A%2F%2Ftokyo-kitchen.icook.tw.s3.amazonaws.com%2Fuploads%2Frecipe%2Fcover%2F440879%2Ff537250f58a663ea.jpg&width=443" alt="食譜圖"/>
+                        </div>
+                     </a>
+                     <a href="#">
+                        <div class="d-flex justify-content-between align-items-center nav-notification-new">
+                            <div>
+                                <span style="font-weight:550;">您的食譜 「《家常菜》番茄蛋花湯」收到了新的留言 ! </span><br>
+                                <span style="color:rgb(168, 168, 168);font-size:0.9rem;">一週前</span>
+                            </div>
+                            <img src="https://imageproxy.icook.network/resize?background=255%2C255%2C255&nocrop=true&stripmeta=true&type=auto&url=http%3A%2F%2Ftokyo-kitchen.icook.tw.s3.amazonaws.com%2Fuploads%2Frecipe%2Fcover%2F440879%2Ff537250f58a663ea.jpg&width=443" alt="食譜圖"/>
+                        </div>
+                     </a>
+                     <a href="#">
+                        <div class="d-flex justify-content-between align-items-center nav-notification-new">
+                            <div>
+                                <span style="font-weight:550;">您的食譜 「《家常菜》番茄蛋花湯」收到了新的留言 ! </span><br>
+                                <span style="color:rgb(168, 168, 168);font-size:0.9rem;">一週前</span>
+                            </div>
+                            <img src="https://imageproxy.icook.network/resize?background=255%2C255%2C255&nocrop=true&stripmeta=true&type=auto&url=http%3A%2F%2Ftokyo-kitchen.icook.tw.s3.amazonaws.com%2Fuploads%2Frecipe%2Fcover%2F440879%2Ff537250f58a663ea.jpg&width=443" alt="食譜圖"/>
+                        </div>
+                     </a>
+                     <a href="#">
+                        <div class="d-flex justify-content-between align-items-center nav-notification-new">
+                            <div>
+                                <span style="font-weight:550;">您的食譜 「《家常菜》番茄蛋花湯」收到了新的留言 ! </span><br>
+                                <span style="color:rgb(168, 168, 168);font-size:0.9rem;">一週前</span>
+                            </div>
+                            <img src="https://imageproxy.icook.network/resize?background=255%2C255%2C255&nocrop=true&stripmeta=true&type=auto&url=http%3A%2F%2Ftokyo-kitchen.icook.tw.s3.amazonaws.com%2Fuploads%2Frecipe%2Fcover%2F440879%2Ff537250f58a663ea.jpg&width=443" alt="食譜圖"/>
+                        </div>
+                     </a>
+                </div>
             </div>
         </div>
         <div class="row">
