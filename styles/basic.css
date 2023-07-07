@@ -355,10 +355,9 @@
     
     .nav-notification-tab {
         width: 100%;
-        font-size: 1.1rem;
+        font-size: 0.9rem;
         font-weight: 550;
         color: var(--dark);
-
     }
     
     .nav-notification-tab li {
@@ -399,17 +398,18 @@
     .nav-notification-article div {
         width: 200px;
     }
-
-
-.nav-notification-progress img{
-    width:80px;
-    border-radius:5px;
-}
-.nav-notification-new img{
-    width:100px;
-    border-radius:5px;
-}
-.nav-notification-progress div,
-.nav-notification-new div{
-    width:240px;
-}
+    
+    .nav-notification-progress img {
+        width: 80px;
+        border-radius: 5px;
+    }
+    
+    .nav-notification-new img {
+        width: 100px;
+        border-radius: 5px;
+    }
+    
+    .nav-notification-progress div,
+    .nav-notification-new div {
+        width: 240px;
+    }
