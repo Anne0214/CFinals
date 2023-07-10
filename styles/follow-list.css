@@ -70,3 +70,32 @@
     border-radius: 50%;
     margin: 20px;
 }
+
+#d-follow-content,#d-follow-list{
+    display:none;
+}
+
+#d-follow-content.active{
+    display:flex;
+}
+#d-follow-list.active{
+    display:block;
+}
+.d-follow-content-item{
+    width:220px;
+    display:inline-block;
+    margin: 20px auto;
+}
+#d-follow-content .title{
+    font-weight:600;
+    font-size:1.05rem;
+}
+/* 無法作用 */
+.d-follow-content-item:last-child {
+    margin-right: auto;
+}
+
+
+
+
+
