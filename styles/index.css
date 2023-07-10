@@ -1,0 +1,90 @@
+:root {
+    --dark: #454545;
+    --gray: #e7e7e7;
+    --dark-gray: #787878;
+    --orange: #FF6000;
+    --median: #FFA559;
+    --light: #FFE6C7;
+}
+
+.banner figcaption {
+    width: 100%;
+}
+
+.banner figcaption p {
+    position: absolute;
+    bottom: 0;
+    color: #fff;
+    font-weight: 700;
+    font-size: 1.15rem;
+    z-index: 13;
+}
+
+.banner figcaption::after {
+    background-image: linear-gradient(-180deg, transparent, rgba(0, 0, 0, .6));
+    content: " ";
+    position: absolute;
+    bottom: 0;
+    z-index: 0;
+    height: 60%;
+    width: 100%;
+    left: 0;
+}
+
+.banner {
+    position: relative;
+    width: 300px;
+}
+
+.banner img {
+    width: 100%;
+    z-index: -1;
+}
+
+#d-category li {
+    padding: 0px 20px;
+}
+
+#d-category li:hover {
+    color: var(--orange);
+    transition-duration: 300ms;
+}
+
+.d-index-box .title {
+    border-top-right-radius: 10px;
+    border-top-left-radius: 10px;
+    background-color: #FFD632;
+    font-size: 1.15rem;
+    padding: 10px 40px;
+    font-weight: 700;
+    position: relative;
+}
+
+.d-index-box .content {
+    background-color: var(--gray);
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 40px;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+.d-index-box .content .item {
+    width: 180px;
+    position: relative;
+}
+
+.d-index-box .content .item img {
+    width: 100%;
+}
+
+.d-index-box .title .more {
+    font-weight: 550;
+    position: absolute;
+    right: 20px;
+    font-size: 0.9rem;
+}
+
+.d-index-box-normal {
+    border-radius: 10px;
+}
