@@ -7,9 +7,32 @@
     --light: #FFE6C7;
 }
 
+.carousel-caption h5 {
+    font-weight: 700;
+}
+
+.carousel-caption {
+    z-index: 40;
+}
+
+.carousel-indicators {
+    z-index: 40;
+}
+
+.carousel-inner::after {
+    content: " ";
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    z-index: 2;
+    background-image: linear-gradient(-180deg, transparent, rgba(0, 0, 0, .6));
+    /* transform: translateX(-12px); */
+    height: 40%;
+}
 
 #d-category li {
     padding: 0px 20px;
+    font-weight: 600;
 }
 
 #d-category li:hover {
@@ -17,10 +40,10 @@
     transition-duration: 300ms;
 }
 
-.d-index-box .title {
+.d-index-box>.title {
     border-top-right-radius: 10px;
     border-top-left-radius: 10px;
-    background-color: #FFD632;
+    background-color: #FFFF93;
     font-size: 1.15rem;
     padding: 10px 40px;
     font-weight: 700;
@@ -36,12 +59,12 @@
     border-bottom-right-radius: 10px;
 }
 
-.d-index-box .content .item {
+.content .item {
     width: 180px;
     position: relative;
 }
 
-.d-index-box .content .item img {
+.content .item img {
     width: 100%;
 }
 
@@ -56,31 +79,43 @@
     border-radius: 10px;
 }
 
-.d-decoration{
-    position:relative;
-    
-    
+.d-decoration {
+    position: relative;
+}
 
+.d-decoration img {
+    width: 500px;
+    margin: auto;
+    border-radius: 10px;
 }
-.d-decoration img{
-    width:500px;
-    margin:auto;
+
+.d-decoration .description {
+    position: absolute;
+    bottom: 30px;
+    left: 50px;
+    color: #fff;
 }
-.d-decoration .description{
-    position:absolute;
-    bottom:30px;
-    left:50px;
-    color:#fff;
+
+.d-decoration .description button {
+    color: #fff;
+    padding: 5px 20px;
+    border-radius: 5px;
+    font-weight: 600;
+    background-color: var(--orange);
+    border: none;
 }
-.d-decoration .description button{
-    color:#fff;
-    padding:5px 20px;
-    border-radius:5px;
-    font-weight:600;
-    background-color:var(--orange);
-    
-    border:none;
+
+.row {
+    margin: 60px 0px;
 }
-.row{
-    margin:80px 0px;
+
+.content .recipe .title {
+    font-weight: 600;
+    font-size: 1.15rem;
+}
+
+.d-index-box-normal>.content {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 40px;
 }
