@@ -46,8 +46,8 @@
 }
 
 .standard input[type="radio"]:checked+label {
-    background-color: var(--median);
-    color: var(--dark);
+    background-color: var(--orange);
+    color: #fff;
     transition-duration: 500ms;
 }
 
@@ -105,4 +105,57 @@ input[type=number]::-webkit-inner-spin-button {
     width: 100%;
     height: 40px;
     margin: 10px 0px;
+}
+
+
+/* 下方說明切換tab*/
+
+.tab-btn {
+    font-size: 1.15rem;
+    background: #dfdfdf;
+    color: #898989;
+    font-weight: 700;
+    line-height: 50px;
+    text-align: center;
+    height: 50px;
+    border-right: 0.75px solid #fff;
+}
+
+.tab-btn.active {
+    background: var(--median);
+    color: #fff;
+    border-bottom: 3px solid #8d4d26;
+}
+
+.tab-btn:hover {
+    cursor: pointer;
+}
+
+#tab2,
+#tab3,
+#tab4,
+#tab5 {
+    display: none;
+}
+
+.slider-nav img {
+    width: 60px;
+    margin: 10px;
+    box-sizing: content-box;
+}
+
+.slider-for {
+    width: 100%;
+}
+
+.slider-for img {
+    width: 90%;
+}
+
+.slider-nav img.active {
+    border: 2px solid var(--orange);
+}
+
+.row {
+    margin: 30px 0;
 }
