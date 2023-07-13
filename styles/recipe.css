@@ -1,0 +1,68 @@
+:root {
+    --dark: #454545;
+    --gray: #e7e7e7;
+    --dark-gray: #787878;
+    --orange: #FF6000;
+    --median: #FFA559;
+    --light: #FFE6C7;
+}
+
+.row{
+    margin:50px 0px;
+}
+.d-img img{
+    width:100%;
+}
+.d-intro{
+    padding:20px;
+    position:relative;
+}
+
+.d-intro .title{
+   /* font-size:1.15rem; */
+   margin:20px 0; 
+}
+.d-intro .author{
+    margin:20px 0;
+}
+.d-intro .time{
+    font-size:0.8rem;
+    color:var(--dark-gray);
+}
+.d-intro .author>img{
+    border-radius:50%;
+    width:40px;
+    height:40px;
+}
+.d-intro .author .name{
+    font-size:1.1rem;
+    margin:0px 10px;
+}
+.d-intro .author .btn{
+    font-size:0.8rem;
+}
+
+.d-intro .btns{
+    margin:20px;
+    position:absolute;
+    bottom:0;
+    right:20px;
+}
+.d-intro .btns>button{
+    width:150px;
+    margin:0 10px;
+}
+
+.d-attribute{
+    width:100%;
+    padding:10px;
+}
+.d-attribute>div{
+    text-align:center;
+}
+.d-attribute .label{
+    font-size:0.9rem;
+}
+.d-attribute .content{
+    font-size:1.15rem;
+}
