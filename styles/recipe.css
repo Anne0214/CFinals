@@ -7,62 +7,111 @@
     --light: #FFE6C7;
 }
 
-.row{
-    margin:50px 0px;
-}
-.d-img img{
-    width:100%;
-}
-.d-intro{
-    padding:20px;
-    position:relative;
+.row {
+    margin: 50px 0px;
 }
 
-.d-intro .title{
-   /* font-size:1.15rem; */
-   margin:20px 0; 
-}
-.d-intro .author{
-    margin:20px 0;
-}
-.d-intro .time{
-    font-size:0.8rem;
-    color:var(--dark-gray);
-}
-.d-intro .author>img{
-    border-radius:50%;
-    width:40px;
-    height:40px;
-}
-.d-intro .author .name{
-    font-size:1.1rem;
-    margin:0px 10px;
-}
-.d-intro .author .btn{
-    font-size:0.8rem;
+.d-img img {
+    width: 100%;
 }
 
-.d-intro .btns{
-    margin:20px;
-    position:absolute;
-    bottom:0;
-    right:20px;
-}
-.d-intro .btns>button{
-    width:150px;
-    margin:0 10px;
+.d-intro {
+    padding: 10px;
+    position: relative;
 }
 
-.d-attribute{
-    width:100%;
-    padding:10px;
+.d-intro .title {
+    /* font-size:1.15rem; */
+    margin: 20px 0;
 }
-.d-attribute>div{
-    text-align:center;
+
+.d-intro .author {
+    margin: 20px 0;
 }
-.d-attribute .label{
-    font-size:0.9rem;
+
+.d-intro .time {
+    font-size: 0.8rem;
+    color: var(--dark-gray);
 }
-.d-attribute .content{
-    font-size:1.15rem;
+
+.d-intro .author>img {
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+}
+
+.d-intro .author .name {
+    font-size: 1rem;
+    margin: 0px 5px;
+}
+
+.d-intro .author .btn {
+    font-size: 0.8rem;
+}
+
+.d-intro .btns {
+    margin: 20px;
+    position: absolute;
+    bottom: 0;
+    right: 20px;
+}
+
+.d-intro .btns>button {
+    width: 150px;
+    margin: 0 10px;
+}
+
+.d-attribute {
+    width: 100%;
+    padding: 10px;
+}
+
+.d-attribute>div {
+    text-align: center;
+}
+
+.d-attribute .label {
+    font-size: 0.9rem;
+}
+
+.d-attribute .content {
+    font-size: 1.15rem;
+}
+
+.t-food {
+    width: 100%;
+    font-size: 1rem;
+}
+
+.t-food td {
+    padding: 8px;
+}
+
+.t-food tr td:nth-child(2n+1) {
+    text-align: left;
+    font-weight: 600;
+}
+
+.t-food tr td:nth-child(2n) {
+    text-align: right;
+}
+
+.t-food tr:nth-child(2n) {
+    background-color: var(--light);
+}
+
+.d-step img {
+    width: 200px;
+}
+
+.d-step .item .number {
+    display: inline-block;
+}
+
+.d-step .item .description {
+    font-size: 1.1rem;
+}
+
+.d-content .btns .btn {
+    margin: 0px 10px;
 }
