@@ -11,11 +11,7 @@
 
     <!-- 我們的Style -->
     <link rel="stylesheet" href="styles/basic.css">
-    <!-- font awesome -->
-    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer"/> -->
-
-    <!-- 該頁的style -->
-    <link rel="stylesheet" href="styles/follow-list.css">
+    <link rel="stylesheet" href="styles/create-recipe.css">
 
 </head>
 
@@ -245,123 +241,100 @@
     <!-- #### Content ####-->
     <div class="container">
         <div class="row">
-            <div class="col-2 sidebar">
-                <ul class="list-unstyled sidebar-list">
-                    <li class="hover">
-                        <i class="fa-solid fa-utensils"></i>
-                        <span>追蹤動態</span>
-                    </li>
-                    <li class="active">
-                        <i class=" fa-solid fa-user-group"></i>
-                        <span>我的追蹤</span>
-                        <span class="num">10</span>
-                    </li>
-                    <li class="hover">
-                        <i class="fa-solid fa-user-check"></i>
-                        <span>我的粉絲</span>
-                        <span class="num">12</span>
-                    </li>
+            <div class="col-3">
+                <ul class="list-unstyled" id="sidebar">
+                    <li>基本資料 <i class="fa-regular fa-circle-check"></i></li>
+                    <li>步驟 <i class="fa-regular fa-circle-check"></i></li>
+                    <li>食材 <i class="fa-solid fa-circle-xmark"></i></li>
                 </ul>
             </div>
+            <div class="col-9">
+                <form action="post" class="needs-validation">
+                    <div class="section">
+                        <div class="title">
+                            <h4><i class="fa-solid fa-note-sticky"></i> 基本資料</h4>
+                        </div>
+                        <div class="content row">
+                            <input type="text" name="AUTHOR_作者" hidden>
+                            <div class="col-12">
+                                <label for="RECIPE_NAME食譜名稱" class="form-label">請輸入食譜名稱</label>
+                                <input type="text" class="form-control" name="RECIPE_NAME食譜名稱" maxlength="20" required>
+                            </div>
+                            <div class="col-12">
+                                <label for="RECIPE_COVER" class="form-label">食譜封面照</label><br>
+                                <img src="Images/core-images/logo-reverse.png" alt="上傳放置處" id="preview-cover">
+                                <input type="file" id="RECIPE_COVER" name="RECIPE_COVER" class="form-control" accept="image/png, image/x-png, image/jpeg, image/pjpeg">
+                            </div>
+                            <div class="col-12">
+                                <label for="RECIPE_COVER" class="form-label">簡短說明</label>
+                                <textarea name="SHORT_DESCRIPTION簡短說明" id="SHORT_DESCRIPTION簡短說明" cols="30" rows="10" maxlength="150" minlength="20" class="form-control" required></textarea>
+                            </div>
+                            <div class="col-6">
+                                <label for="COST_MINUTES花費時間" class="form-label">花費時間</label>
+                                <select name="COST_MINUTES花費時間" id="COST_MINUTES花費時間" class="form-select" required>
+                                        <option value="1" selected>10</option>
+                                        <option value="2">30</option>
+                                    </select>
+                            </div>
+                            <div class="col-6">
+                                <label for="份量" class="form-label">份量</label>
+                                <select name="份量" id="份量" class="form-select" required>
+                                        <option value="1" selected>2</option>
+                                        <option value="2">3</option>
+                                    </select>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="section">
+                        <div class="title">
+                            <h4><i class="fa-solid fa-utensils"></i> 步驟</h4>
+                        </div>
+                        <div class="content row">
+                            <div class="step d-flex align-items-center">
+                                <div style="width:200px;">
+                                    <img src="Images/core-images/logo-reverse.png" alt="步驟預覽圖">
+                                    <input type="file" class="form-control" accept="image/png, image/x-png, image/jpeg, image/pjpeg" name="STEP_DESCRIPTION_PICTURE步驟附圖">
+                                </div>
+                                <div style="position:relative;" class="flex-fill">
+                                    <span class="number">1</span>
+                                    <span class="btns">
+                                        <i class="fa-solid fa-trash-can"></i>
+                                        <i class="fa-solid fa-plus"></i>
+                                    </span>
+                                    <textarea name="STEP_DESCRIPTION步驟說明" id="STEP_DESCRIPTION步驟說明" maxlength="200" minlength="20" class="form-control" rows="4">請輸入步驟說明</textarea>
+                                </div>
 
-            <div class="col-10">
-                <div id="d-follow-content" class="justify-content-between flex-wrap">
-                    <div class="d-follow-content-item">
-                        <img style="width:100%;" src="https://imageproxy.icook.network/resize?background=255%2C255%2C255&nocrop=true&stripmeta=true&type=auto&url=http%3A%2F%2Ftokyo-kitchen.icook.tw.s3.amazonaws.com%2Fuploads%2Frecipe%2Fcover%2F440879%2Ff537250f58a663ea.jpg&width=443"
-                            alt="食譜圖">
-                        <span class="title">番茄蛋花湯</span><br>
-                        <span class="author">深夜浣熊</span>
-                    </div>
-                    <div class="d-follow-content-item">
-                        <img style="width:100%;" src="https://imageproxy.icook.network/resize?background=255%2C255%2C255&nocrop=true&stripmeta=true&type=auto&url=http%3A%2F%2Ftokyo-kitchen.icook.tw.s3.amazonaws.com%2Fuploads%2Frecipe%2Fcover%2F440879%2Ff537250f58a663ea.jpg&width=443"
-                            alt="食譜圖">
-                        <span class="title">番茄蛋花湯</span><br>
-                        <span class="author">深夜浣熊</span>
-                    </div>
-                    <div class="d-follow-content-item">
-                        <img style="width:100%;" src="https://imageproxy.icook.network/resize?background=255%2C255%2C255&nocrop=true&stripmeta=true&type=auto&url=http%3A%2F%2Ftokyo-kitchen.icook.tw.s3.amazonaws.com%2Fuploads%2Frecipe%2Fcover%2F440879%2Ff537250f58a663ea.jpg&width=443"
-                            alt="食譜圖">
-                        <span class="title">番茄蛋花湯</span><br>
-                        <span class="author">深夜浣熊</span>
-                    </div>
-                    <div class="d-follow-content-item">
-                        <img style="width:100%;" src="https://imageproxy.icook.network/resize?background=255%2C255%2C255&nocrop=true&stripmeta=true&type=auto&url=http%3A%2F%2Ftokyo-kitchen.icook.tw.s3.amazonaws.com%2Fuploads%2Frecipe%2Fcover%2F440879%2Ff537250f58a663ea.jpg&width=443"
-                            alt="食譜圖">
-                        <span class="title">番茄蛋花湯</span><br>
-                        <span class="author">深夜浣熊</span>
-                    </div>
-                    <div class="d-follow-content-item">
-                        <img style="width:100%;" src="https://imageproxy.icook.network/resize?background=255%2C255%2C255&nocrop=true&stripmeta=true&type=auto&url=http%3A%2F%2Ftokyo-kitchen.icook.tw.s3.amazonaws.com%2Fuploads%2Frecipe%2Fcover%2F440879%2Ff537250f58a663ea.jpg&width=443"
-                            alt="食譜圖">
-                        <span class="title">番茄蛋花湯</span><br>
-                        <span class="author">深夜浣熊</span>
-                    </div>
-                    <div class="d-follow-content-item">
-                        <img style="width:100%;" src="https://imageproxy.icook.network/resize?background=255%2C255%2C255&nocrop=true&stripmeta=true&type=auto&url=http%3A%2F%2Ftokyo-kitchen.icook.tw.s3.amazonaws.com%2Fuploads%2Frecipe%2Fcover%2F440879%2Ff537250f58a663ea.jpg&width=443"
-                            alt="食譜圖">
-                        <span class="title">番茄蛋花湯</span><br>
-                        <span class="author">深夜浣熊</span>
-                    </div>
-                    <div class="d-follow-content-item">
-                        <img style="width:100%;" src="https://imageproxy.icook.network/resize?background=255%2C255%2C255&nocrop=true&stripmeta=true&type=auto&url=http%3A%2F%2Ftokyo-kitchen.icook.tw.s3.amazonaws.com%2Fuploads%2Frecipe%2Fcover%2F440879%2Ff537250f58a663ea.jpg&width=443"
-                            alt="食譜圖">
-                        <span class="title">番茄蛋花湯</span><br>
-                        <span class="author">深夜浣熊</span>
-                    </div>
-                    <div class="d-follow-content-item">
-                        <img style="width:100%;" src="https://imageproxy.icook.network/resize?background=255%2C255%2C255&nocrop=true&stripmeta=true&type=auto&url=http%3A%2F%2Ftokyo-kitchen.icook.tw.s3.amazonaws.com%2Fuploads%2Frecipe%2Fcover%2F440879%2Ff537250f58a663ea.jpg&width=443"
-                            alt="食譜圖">
-                        <span class="title">番茄蛋花湯</span><br>
-                        <span class="author">深夜浣熊</span>
-                    </div>
-                    <div class="d-follow-content-item">
-                        <img style="width:100%;" src="https://imageproxy.icook.network/resize?background=255%2C255%2C255&nocrop=true&stripmeta=true&type=auto&url=http%3A%2F%2Ftokyo-kitchen.icook.tw.s3.amazonaws.com%2Fuploads%2Frecipe%2Fcover%2F440879%2Ff537250f58a663ea.jpg&width=443"
-                            alt="食譜圖">
-                        <span class="title">番茄蛋花湯</span><br>
-                        <span class="author">深夜浣熊</span>
-                    </div>
-                    <div class="d-follow-content-item">
-                        <img style="width:100%;" src="https://imageproxy.icook.network/resize?background=255%2C255%2C255&nocrop=true&stripmeta=true&type=auto&url=http%3A%2F%2Ftokyo-kitchen.icook.tw.s3.amazonaws.com%2Fuploads%2Frecipe%2Fcover%2F440879%2Ff537250f58a663ea.jpg&width=443"
-                            alt="食譜圖">
-                        <span class="title">番茄蛋花湯</span><br>
-                        <span class="author">深夜浣熊</span>
-                    </div>
-                    <div class="d-follow-content-item">
-                        <img style="width:100%;" src="https://imageproxy.icook.network/resize?background=255%2C255%2C255&nocrop=true&stripmeta=true&type=auto&url=http%3A%2F%2Ftokyo-kitchen.icook.tw.s3.amazonaws.com%2Fuploads%2Frecipe%2Fcover%2F440879%2Ff537250f58a663ea.jpg&width=443"
-                            alt="食譜圖">
-                        <span class="title">番茄蛋花湯</span><br>
-                        <span class="author">深夜浣熊</span>
-                    </div>
-                </div>
-                <div id="d-follow-list" class="active">
-                    <div class="d-user d-flex align-items-center">
-                        <a href="#"><img src="Images/core-images/profile.jpg " alt="頭貼 "></a>
-                        <div class="flex-grow-1">
-                            <span style="font-weight:550;font-size:1.15rem;color:var(--orange);"><a href="">深夜浣熊</a></span><br>
-                            <span>10</span>
-                            <span>食譜</span>
-                            <span>30</span>
-                            <span>粉絲</span> <br>
-                            <span>做自己愛吃 簡單做簡單吃 做菜也可以很chill很快樂~</span>
+
+                            </div>
+                            <button class="btn btn-outline-primary" id="addStep">新增步驟</button>
                         </div>
-                        <button class="btn btn-primary follow"><i class="fa-solid fa-user-plus "></i> 追蹤</button>
-                    </div>
-                    <div class="d-user d-flex align-items-center">
-                        <a href="#"><img src="Images/core-images/profile.jpg " alt="頭貼 "></a>
-                        <div class="flex-grow-1">
-                            <span style="font-weight:550;font-size:1.15rem;color:var(--orange);"><a href="">深夜浣熊</a></span><br>
-                            <span>10</span>
-                            <span>食譜</span>
-                            <span>30</span>
-                            <span>粉絲</span> <br>
-                            <span>做自己愛吃 簡單做簡單吃 做菜也可以很chill很快樂~</span>
-                        </div>
-                        <button class="btn btn-outline-primary unfollow"><i class="fa-solid fa-user-large-slash"></i>取消追蹤</button>
 
                     </div>
-                </div>
+                    <div class="section">
+                        <div class="title">
+                            <h4><i class="fa-solid fa-egg"></i> 食材</h4>
+                        </div>
+                        <div class="content">
+                            <div class="food">
+                                <input type="text" class="form-control">
+                                <input type="text" class="form-control">
+                                <i class="fa-solid fa-trash-can"></i>
+                                <i class="fa-regular fa-bars"></i></div>
+                            <button class="btn btn-outline-primary">新增食材</button></div>
+
+                    </div>
+                    <input type="checkbox" class="form-check-input" name="agree">
+                    <label for="for" class="form-check-label">發布食譜即代表同意UCook的「服務條款」</label>
+                    <div class="btns">
+                        <button class="btn btn-outline-secondary"> 捨棄</button>
+                        <input type="reset" value="清空" class="btn btn-outline-primary">
+                        <input type="submit" value="提交" class="btn btn-primary" />
+                    </div>
+
+                </form>
             </div>
         </div>
+
     </div>
 
 
@@ -422,8 +395,9 @@
     <!-- fontAwsome -->
     <script src="https://kit.fontawesome.com/028aebd974.js " crossorigin="anonymous "></script>
     <script src="./scripts/nav.js "></script>
-    <!-- 該頁的script -->
-    <script src="scripts/follow-list.js"></script>
+
+    <!-- 我的script -->
+    <script src="./scripts/create-recipe.js"></script>
 </body>
 
 </html>
