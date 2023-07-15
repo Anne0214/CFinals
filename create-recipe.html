@@ -290,37 +290,48 @@
                             <h4><i class="fa-solid fa-utensils"></i> 步驟</h4>
                         </div>
                         <div class="content row">
-                            <div class="step d-flex align-items-center">
-                                <div style="width:200px;">
-                                    <img src="Images/core-images/logo-reverse.png" alt="步驟預覽圖">
-                                    <input type="file" class="form-control" accept="image/png, image/x-png, image/jpeg, image/pjpeg" name="STEP_DESCRIPTION_PICTURE步驟附圖">
-                                </div>
-                                <div style="position:relative;" class="flex-fill">
-                                    <span class="number">1</span>
-                                    <span class="btns">
+                            <div id="steps">
+                                <div class="step d-flex align-items-center">
+                                    <div style="width:200px;">
+                                        <img src="Images/core-images/logo-reverse.png" alt="步驟預覽圖">
+                                        <input type="file" class="form-control" accept="image/png, image/x-png, image/jpeg, image/pjpeg" name="STEP_DESCRIPTION_PICTURE步驟附圖">
+                                    </div>
+                                    <div style="position:relative;" class="flex-fill">
+                                        <span class="number">1</span>
+                                        <span class="btns">
                                         <i class="fa-solid fa-trash-can"></i>
                                         <i class="fa-solid fa-plus"></i>
                                     </span>
-                                    <textarea name="STEP_DESCRIPTION步驟說明" id="STEP_DESCRIPTION步驟說明" maxlength="200" minlength="20" class="form-control" rows="4">請輸入步驟說明</textarea>
+                                        <textarea name="STEP_DESCRIPTION步驟說明" id="STEP_DESCRIPTION步驟說明" maxlength="200" minlength="20" class="form-control" rows="4">請輸入步驟說明</textarea>
+                                    </div>
+
+
                                 </div>
-
-
                             </div>
                             <button class="btn btn-outline-primary" id="addStep">新增步驟</button>
                         </div>
-
                     </div>
                     <div class="section">
                         <div class="title">
                             <h4><i class="fa-solid fa-egg"></i> 食材</h4>
                         </div>
                         <div class="content">
-                            <div class="food">
-                                <input type="text" class="form-control">
-                                <input type="text" class="form-control">
-                                <i class="fa-solid fa-trash-can"></i>
-                                <i class="fa-regular fa-bars"></i></div>
-                            <button class="btn btn-outline-primary">新增食材</button></div>
+                            <div class="foods">
+                                <div class="food row">
+                                    <div class="col-6">
+                                        <input type="text" class="form-control" placeholder="名稱">
+                                    </div>
+                                    <div class="col-5">
+                                        <input type="text" class="form-control" placeholder="份量">
+                                    </div>
+                                    <div style="font-size: 1.3rem;
+                                    cursor: pointer;" class="col-1">
+                                        <i class="fa-solid fa-trash-can"></i>
+                                    </div>
+                                </div>
+                            </div>
+                            <button style="margin-top:20px;" class="btn btn-outline-primary col-12" id="addFood">新增食材</button>
+                        </div>
 
                     </div>
                     <input type="checkbox" class="form-check-input" name="agree">
