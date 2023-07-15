@@ -1,12 +1,4 @@
-:root {
-    --dark: #454545;
-    --gray: #e7e7e7;
-    --dark-gray: #787878;
-    --orange: #FF6000;
-    --median: #FFA559;
-    --light: #FFE6C7;
-}
-
+@import url('color.css');
 .container {
     margin-bottom: 30px;
 }
@@ -71,31 +63,33 @@
     margin: 20px;
 }
 
-#d-follow-content,#d-follow-list{
-    display:none;
+#d-follow-content,
+#d-follow-list {
+    display: none;
 }
 
-#d-follow-content.active{
-    display:flex;
+#d-follow-content.active {
+    display: flex;
 }
-#d-follow-list.active{
-    display:block;
+
+#d-follow-list.active {
+    display: block;
 }
-.d-follow-content-item{
-    width:220px;
-    display:inline-block;
+
+.d-follow-content-item {
+    width: 220px;
+    display: inline-block;
     margin: 20px auto;
 }
-#d-follow-content .title{
-    font-weight:600;
-    font-size:1.05rem;
+
+#d-follow-content .title {
+    font-weight: 600;
+    font-size: 1.05rem;
 }
+
+
 /* 無法作用 */
+
 .d-follow-content-item:last-child {
     margin-right: auto;
 }
-
-
-
-
-

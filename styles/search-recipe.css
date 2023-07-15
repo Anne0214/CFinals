@@ -1,0 +1,63 @@
+@import url('color.css');
+.keyword {
+    color: var(--orange);
+}
+
+.d-result .item .img-recipe {
+    width: 400px;
+    border-radius: 10px;
+}
+
+.d-result {
+    margin-bottom: 50px;
+}
+
+.d-result .item {
+    margin: 40px 0;
+}
+
+.d-result .item .img-author {
+    width: 40px;
+    border-radius: 50%;
+}
+
+.d-result .item .intro {
+    position: relative;
+}
+
+.d-result .author {
+    font-size: 1rem;
+}
+
+.d-result .time {
+    font-size: 0.8rem;
+    color: var(--dark-gray);
+}
+
+.d-result .item .intro {
+    padding: 20px;
+}
+
+.d-result .item .food,
+.d-result .item h4,
+.d-result .item .description {
+    margin: 20px 0;
+}
+
+.d-result .item .food>li {
+    background-color: var(--light);
+    padding: 5px 10px;
+    margin: 0 8px;
+    border-radius: 5px;
+    font-size: 0.9rem;
+}
+
+.d-result .item .count {
+    margin: 0 10px;
+}
+
+.d-result .item .counts {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+}
