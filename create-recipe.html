@@ -243,14 +243,21 @@
         <div class="row">
             <div class="col-3">
                 <ul class="list-unstyled" id="sidebar">
-                    <li>基本資料 <i class="fa-regular fa-circle-check"></i></li>
-                    <li>步驟 <i class="fa-regular fa-circle-check"></i></li>
-                    <li>食材 <i class="fa-solid fa-circle-xmark"></i></li>
+                    <li>
+                        <a href="#basic">基本資料 <i class="fa-regular fa-circle-check"></i></a>
+                    </li>
+                    <li>
+                        <a href="#step">步驟 <i class="fa-regular fa-circle-check"></i></a>
+                    </li>
+                    <li>
+                        <a href="#food">食材 <i class="fa-solid fa-circle-xmark"></i></a>
+                        </i>
+                    </li>
                 </ul>
             </div>
             <div class="col-9">
-                <form action="post" class="needs-validation">
-                    <div class="section">
+                <form action="post" class="needs-validation" novalidate>
+                    <div class=" section" id="basic">
                         <div class="title">
                             <h4><i class="fa-solid fa-note-sticky"></i> 基本資料</h4>
                         </div>
@@ -258,16 +265,18 @@
                             <input type="text" name="AUTHOR_作者" hidden>
                             <div class="col-12">
                                 <label for="RECIPE_NAME食譜名稱" class="form-label">請輸入食譜名稱</label>
-                                <input type="text" class="form-control" name="RECIPE_NAME食譜名稱" maxlength="20" required>
+                                <input type="text" class="form-control" name="RECIPE_NAME食譜名稱" maxlength="20" minlength="3" required>
+                                <div class="invalid-feedback">請至少輸入3個字做為標題</div>
                             </div>
                             <div class="col-12">
                                 <label for="RECIPE_COVER" class="form-label">食譜封面照</label><br>
-                                <img src="Images/core-images/logo-reverse.png" alt="上傳放置處" id="preview-cover">
+                                <img style="width:400px;" src="Images/recipe/UploadImage2.png" alt="上傳放置處" id="preview-cover">
                                 <input type="file" id="RECIPE_COVER" name="RECIPE_COVER" class="form-control" accept="image/png, image/x-png, image/jpeg, image/pjpeg">
                             </div>
                             <div class="col-12">
                                 <label for="RECIPE_COVER" class="form-label">簡短說明</label>
-                                <textarea name="SHORT_DESCRIPTION簡短說明" id="SHORT_DESCRIPTION簡短說明" cols="30" rows="10" maxlength="150" minlength="20" class="form-control" required></textarea>
+                                <textarea name="SHORT_DESCRIPTION簡短說明" id="SHORT_DESCRIPTION簡短說明" cols="30" rows="10 " maxlength="150" minlength="15" class="form-control" required></textarea>
+                                <div class="invalid-feedback">請至少輸入15字食譜說明</div>
                             </div>
                             <div class="col-6">
                                 <label for="COST_MINUTES花費時間" class="form-label">花費時間</label>
@@ -278,14 +287,14 @@
                             </div>
                             <div class="col-6">
                                 <label for="份量" class="form-label">份量</label>
-                                <select name="份量" id="份量" class="form-select" required>
+                                <select name="份量" id="份量" class="form-select " required>
                                         <option value="1" selected>2</option>
                                         <option value="2">3</option>
                                     </select>
                             </div>
                         </div>
                     </div>
-                    <div class="section">
+                    <div class="section" id="step">
                         <div class="title">
                             <h4><i class="fa-solid fa-utensils"></i> 步驟</h4>
                         </div>
@@ -293,8 +302,8 @@
                             <div id="steps">
                                 <div class="step d-flex align-items-center">
                                     <div style="width:200px;">
-                                        <img src="Images/core-images/logo-reverse.png" alt="步驟預覽圖">
-                                        <input type="file" class="form-control" accept="image/png, image/x-png, image/jpeg, image/pjpeg" name="STEP_DESCRIPTION_PICTURE步驟附圖">
+                                        <img src="Images/recipe/UploadImage.png" style="width:200px;height:158px;object-fit:cover;" id="preview-step1" alt="步驟預覽圖">
+                                        <input type="file" class="form-control" accept="image/png, image/x-png, image/jpeg, image/pjpeg" name="STEP_DESCRIPTION_PICTURE步驟附圖" id="upload_step1">
                                     </div>
                                     <div style="position:relative;" class="flex-fill">
                                         <span class="number">1</span>
@@ -302,16 +311,15 @@
                                         <i class="fa-solid fa-trash-can"></i>
                                         <i class="fa-solid fa-plus"></i>
                                     </span>
-                                        <textarea name="STEP_DESCRIPTION步驟說明" id="STEP_DESCRIPTION步驟說明" maxlength="200" minlength="20" class="form-control" rows="4">請輸入步驟說明</textarea>
+                                        <textarea name="STEP_DESCRIPTION步驟說明 " id="STEP_DESCRIPTION步驟說明" maxlength="200" minlength="5" class="form-control" rows="4" placeholder="請輸入步驟說明" required></textarea>
+                                        <div class="invalid-feedback">請至少輸入5字步驟說明</div>
                                     </div>
-
-
                                 </div>
                             </div>
                             <button class="btn btn-outline-primary" id="addStep">新增步驟</button>
                         </div>
                     </div>
-                    <div class="section">
+                    <div class="section" id="food">
                         <div class="title">
                             <h4><i class="fa-solid fa-egg"></i> 食材</h4>
                         </div>
@@ -319,13 +327,14 @@
                             <div class="foods">
                                 <div class="food row">
                                     <div class="col-6">
-                                        <input type="text" class="form-control" placeholder="名稱">
+                                        <input type="text" class="form-control" placeholder="名稱" required>
+                                        <div class="invalid-feedback">請輸入食材名稱</div>
                                     </div>
                                     <div class="col-5">
-                                        <input type="text" class="form-control" placeholder="份量">
+                                        <input type="text" class="form-control" placeholder="份量" required>
+                                        <div class="invalid-feedback">請輸入份量。如 : 一匙、適量</div>
                                     </div>
-                                    <div style="font-size: 1.3rem;
-                                    cursor: pointer;" class="col-1">
+                                    <div style="font-size: 1.3rem; cursor: pointer;" class="col-1">
                                         <i class="fa-solid fa-trash-can"></i>
                                     </div>
                                 </div>
@@ -338,7 +347,7 @@
                     <label for="for" class="form-check-label">發布食譜即代表同意UCook的「服務條款」</label>
                     <div class="btns">
                         <button class="btn btn-outline-secondary"> 捨棄</button>
-                        <input type="reset" value="清空" class="btn btn-outline-primary">
+                        <input type="reset" value="清空" class="btn btn-outline-primary ">
                         <input type="submit" value="提交" class="btn btn-primary" />
                     </div>
 
@@ -351,19 +360,19 @@
 
     <!-- ##### Footer Area Start ##### -->
     <footer>
-        <div class="d-flex justify-content-between flex-nowrap " style="margin:auto; ">
+        <div class="d-flex justify-content-between flex-nowrap" style="margin:auto;">
             <div>
-                <img style="display:block;height:80px; " src="Images/core-images/logo.png " alt="Logo ">
-                <div id="icons " class="d-flex justify-content-between flex-nowrap ">
-                    <i class="fa-brands fa-line fa-lg "></i>
-                    <i class="fa-brands fa-facebook fa-lg "></i>
-                    <i class="fa-brands fa-twitter fa-lg "></i>
-                    <i class="fa-solid fa-envelope fa-lg "></i>
+                <img style="display:block;height:80px;" src="Images/core-images/logo.png " alt="Logo ">
+                <div id="icons " class="d-flex justify-content-between flex-nowrap">
+                    <i class="fa-brands fa-line fa-lg"></i>
+                    <i class="fa-brands fa-facebook fa-lg"></i>
+                    <i class="fa-brands fa-twitter fa-lg"></i>
+                    <i class="fa-solid fa-envelope fa-lg"></i>
                 </div>
             </div>
             <div>
-                <span class="footer-head ">關於UCook</span>
-                <ul class="footer-item list-unstyled ">
+                <span class="footer-head">關於UCook</span>
+                <ul class="footer-item list-unstyled">
                     <li>公司資訊</li>
                     <li>徵才訊息</li>
                     <li>廣告合作</li>
@@ -372,8 +381,8 @@
                 </ul>
             </div>
             <div>
-                <span class="footer-head ">會員服務</span>
-                <ul class="footer-item list-unstyled ">
+                <span class="footer-head">會員服務</span>
+                <ul class="footer-item list-unstyled">
                     <li>個人頁面</li>
                     <li>商品訂單</li>
                     <li>帳號設定</li>
@@ -381,8 +390,8 @@
                 </ul>
             </div>
             <div>
-                <span class="footer-head ">我的食譜</span>
-                <ul class="footer-item list-unstyled ">
+                <span class="footer-head">我的食譜</span>
+                <ul class="footer-item list-unstyled">
                     <li>待買清單</li>
                     <li>收藏食譜</li>
                     <li>新增食譜</li>
@@ -408,7 +417,7 @@
     <script src="./scripts/nav.js "></script>
 
     <!-- 我的script -->
-    <script src="./scripts/create-recipe.js"></script>
+    <script src="./scripts/create-recipe.js "></script>
 </body>
 
 </html>
