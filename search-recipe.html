@@ -243,15 +243,37 @@
     <div class="container">
         <div class="row" style="margin:20px 0;">
             <div class="col-2">
-                <select class="form-select" aria-label="Default select example" id="search-target">
-                <option value="1" selected>找食譜</option>
-                <option value="2">找作者</option>
-              </select>
+                <select class="form-select" id="search-target">
+                    <option value="1" selected>找食譜</option>
+                    <option value="2">找作者</option>
+                </select>
             </div>
             <div class="col-7">
-                <div class="input-group mb-3">
-                    <input type="text" class="form-control" placeholder="輸入食譜名稱" aria-label="Recipient's username" aria-describedby="button-addon2" id="search-input">
-                    <button class="btn btn-primary" type="button" id="button-addon2">搜尋</button>
+                <div class="input-group" id="search-input">
+                    <input type="text" class="form-control" placeholder="輸入食譜名稱" id="search-input-recipe">
+                    <input type="text" class="form-control" placeholder="食材名稱，請以空白隔開" id="search-input-food">
+                    <button class="btn btn-primary" type="button" id="button-addon2"><i class="fa-solid fa-magnifying-glass"></i> 搜尋</button>
+                </div>
+                <button class="btn-advanced-search" type="button" data-bs-toggle="collapse" data-bs-target="#collapseAdvanceSearch" aria-expanded="false" aria-controls="collapseAdvanceSearch">
+                    進階搜尋▾
+                </button>
+                <div class="collapse" id="collapseAdvanceSearch">
+                    <div class="row">
+                        <div class="col-6">
+                            <label for="amount" class="form-label">份量</label>
+                            <select name="amount" id="amount" class="form-select">
+                                <option value="1" selected>1人</option>
+                                <option value="2">2人</option>
+                            </select>
+                        </div>
+                        <div class="col-6">
+                            <label for="time" class="form-label">時間</label>
+                            <select name="time" id="time" class="form-select">
+                                <option value="1">10分鐘</option>
+                                <option value="2">20分鐘</option>
+                            </select>
+                        </div>
+                    </div>
                 </div>
             </div>
             <div class="col-3" style="text-align:right;">
@@ -320,65 +342,66 @@
 
             </div>
         </div>
+    </div>
 
-
-        <!-- ##### Footer Area Start ##### -->
-        <footer>
-            <div class="d-flex justify-content-between flex-nowrap " style="margin:auto; ">
-                <div>
-                    <img style="display:block;height:80px; " src="Images/core-images/logo.png " alt="Logo ">
-                    <div id="icons " class="d-flex justify-content-between flex-nowrap ">
-                        <i class="fa-brands fa-line fa-lg "></i>
-                        <i class="fa-brands fa-facebook fa-lg "></i>
-                        <i class="fa-brands fa-twitter fa-lg "></i>
-                        <i class="fa-solid fa-envelope fa-lg "></i>
-                    </div>
-                </div>
-                <div>
-                    <span class="footer-head ">關於UCook</span>
-                    <ul class="footer-item list-unstyled ">
-                        <li>公司資訊</li>
-                        <li>徵才訊息</li>
-                        <li>廣告合作</li>
-                        <li>商品上架</li>
-                        <li>隱私權與條款</li>
-                    </ul>
-                </div>
-                <div>
-                    <span class="footer-head ">會員服務</span>
-                    <ul class="footer-item list-unstyled ">
-                        <li>個人頁面</li>
-                        <li>商品訂單</li>
-                        <li>帳號設定</li>
-                        <li>忘記密碼</li>
-                    </ul>
-                </div>
-                <div>
-                    <span class="footer-head ">我的食譜</span>
-                    <ul class="footer-item list-unstyled ">
-                        <li>待買清單</li>
-                        <li>收藏食譜</li>
-                        <li>新增食譜</li>
-                        <li>新增食譜</li>
-                </div>
-                <div>
-                    <span class="footer-head ">客服與問題</span>
-                    <ul class="footer-item list-unstyled ">
-                        <li>建議與問題</li>
-                        <li>粉絲專頁:XXXX</li>
+    <!-- ##### Footer Area Start ##### -->
+    <footer>
+        <div class="d-flex justify-content-between flex-nowrap " style="margin:auto; ">
+            <div>
+                <img style="display:block;height:80px; " src="Images/core-images/logo.png " alt="Logo ">
+                <div id="icons " class="d-flex justify-content-between flex-nowrap ">
+                    <i class="fa-brands fa-line fa-lg "></i>
+                    <i class="fa-brands fa-facebook fa-lg "></i>
+                    <i class="fa-brands fa-twitter fa-lg "></i>
+                    <i class="fa-solid fa-envelope fa-lg "></i>
                 </div>
             </div>
-            <p id="copyright ">Copyright©2023 UCook Inc.</p>
-        </footer>
-        <!-- jquery -->
-        <script src="https://code.jquery.com/jquery-3.7.0.min.js " integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g=" crossorigin=" anonymous "></script>
-        <!-- bootstrap -->
-        <script src=" https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js " integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r " crossorigin="anonymous "></script>
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js " integrity="sha384-fbbOQedDUMZZ5KreZpsbe1LCZPVmfTnH7ois6mU1QK+m14rQ1l2bGBq41eYeM/fS " crossorigin="anonymous "></script>
+            <div>
+                <span class="footer-head ">關於UCook</span>
+                <ul class="footer-item list-unstyled ">
+                    <li>公司資訊</li>
+                    <li>徵才訊息</li>
+                    <li>廣告合作</li>
+                    <li>商品上架</li>
+                    <li>隱私權與條款</li>
+                </ul>
+            </div>
+            <div>
+                <span class="footer-head ">會員服務</span>
+                <ul class="footer-item list-unstyled ">
+                    <li>個人頁面</li>
+                    <li>商品訂單</li>
+                    <li>帳號設定</li>
+                    <li>忘記密碼</li>
+                </ul>
+            </div>
+            <div>
+                <span class="footer-head ">我的食譜</span>
+                <ul class="footer-item list-unstyled ">
+                    <li>待買清單</li>
+                    <li>收藏食譜</li>
+                    <li>新增食譜</li>
+                    <li>新增食譜</li>
+            </div>
+            <div>
+                <span class="footer-head ">客服與問題</span>
+                <ul class="footer-item list-unstyled ">
+                    <li>建議與問題</li>
+                    <li>粉絲專頁:XXXX</li>
+            </div>
+        </div>
+        <p id="copyright ">Copyright©2023 UCook Inc.</p>
+    </footer>
+    <!-- jquery -->
+    <script src="https://code.jquery.com/jquery-3.7.0.min.js " integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g=" crossorigin=" anonymous "></script>
+    <!-- bootstrap -->
+    <script src=" https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js " integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r " crossorigin="anonymous "></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js " integrity="sha384-fbbOQedDUMZZ5KreZpsbe1LCZPVmfTnH7ois6mU1QK+m14rQ1l2bGBq41eYeM/fS " crossorigin="anonymous "></script>
 
-        <!-- fontAwsome -->
-        <script src="https://kit.fontawesome.com/028aebd974.js " crossorigin="anonymous "></script>
-        <script src="./scripts/nav.js "></script>
+    <!-- fontAwsome -->
+    <script src="https://kit.fontawesome.com/028aebd974.js " crossorigin="anonymous "></script>
+    <script src="./scripts/nav.js "></script>
+    <script src="./scripts/search-recipe.js "></script>
 </body>
 
 </html>

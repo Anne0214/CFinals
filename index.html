@@ -12,6 +12,7 @@
     <!-- 我們的Style -->
     <link rel="stylesheet" href="styles/basic.css">
     <link rel="stylesheet" href="styles/index.css">
+    <link rel="stylesheet" href="styles/search-recipe.css">
     <!-- 字體 -->
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Martian+Mono:wght@700&display=swap');
@@ -244,17 +245,39 @@
     </nav>
     <!-- #### Content ####-->
     <div class="container">
-        <div class="row" style="margin:20px 0;">
+        <div class="row section" style="margin:20px 0;">
             <div class="col-2">
-                <select class="form-select" aria-label="Default select example" id="search-target">
+                <select class="form-select" id="search-target">
                     <option value="1" selected>找食譜</option>
                     <option value="2">找作者</option>
-                  </select>
+                </select>
             </div>
             <div class="col-7">
-                <div class="input-group mb-3">
-                    <input type="text" class="form-control" placeholder="輸入食譜名稱" aria-label="Recipient's username" aria-describedby="button-addon2" id="search-input">
-                    <button class="btn btn-primary" type="button" id="button-addon2">搜尋</button>
+                <div class="input-group" id="search-input">
+                    <input type="text" class="form-control" placeholder="輸入食譜名稱" id="search-input-recipe">
+                    <input type="text" class="form-control" placeholder="食材名稱，請以空白隔開" id="search-input-food">
+                    <button class="btn btn-primary" type="button" id="button-addon2"><i class="fa-solid fa-magnifying-glass"></i> 搜尋</button>
+                </div>
+                <button class="btn-advanced-search" type="button" data-bs-toggle="collapse" data-bs-target="#collapseAdvanceSearch" aria-expanded="false" aria-controls="collapseAdvanceSearch">
+                    進階搜尋▾
+                </button>
+                <div class="collapse" id="collapseAdvanceSearch">
+                    <div class="row">
+                        <div class="col-6">
+                            <label for="amount" class="form-label">份量</label>
+                            <select name="amount" id="amount" class="form-select">
+                                <option value="1" selected>1人</option>
+                                <option value="2">2人</option>
+                            </select>
+                        </div>
+                        <div class="col-6">
+                            <label for="time" class="form-label">時間</label>
+                            <select name="time" id="time" class="form-select">
+                                <option value="1">10分鐘</option>
+                                <option value="2">20分鐘</option>
+                            </select>
+                        </div>
+                    </div>
                 </div>
             </div>
             <div class="col-3" style="text-align:right;">
@@ -264,7 +287,7 @@
             </div>
         </div>
 
-        <div class="row" style="margin:20px;">
+        <div class="row section" style="margin:20px;">
             <div class="col">
                 <ul id="d-category" class=" list-unstyled d-flex justify-content-between ">
                     <li>端午節</li>
@@ -281,7 +304,7 @@
 
             </div>
         </div>
-        <div class="row" style="margin:20px 0 60px 0;">
+        <div class="row section" style="margin:20px 0 60px 0;">
             <div class="col">
                 <div class="carousel slide" data-bs-ride="carousel">
                     <div class="carousel-indicators">
@@ -323,7 +346,7 @@
                 </div>
             </div>
         </div>
-        <div class="row ">
+        <div class="row section">
             <div class="col d-index-box">
                 <div class="title">
                     <i class="fa-solid fa-gifts "></i> 暢銷排行
@@ -382,7 +405,7 @@
                 </div>
             </div>
         </div>
-        <div class="row">
+        <div class="row section">
             <div class="d-decoration col-6">
                 <img src="Images/index/index-05.png" alt="料理">
                 <div class="description">
@@ -403,7 +426,7 @@
             </div>
         </div>
 
-        <div class="row">
+        <div class="row section">
             <div class="col d-index-box">
                 <div class="title">
                     <i class="fa-solid fa-users"></i>追蹤最新
@@ -438,7 +461,7 @@
                 </div>
             </div>
         </div>
-        <div class="row">
+        <div class="row section">
             <div class="col d-index-box-normal">
                 <h4 class="h-rectangle">人氣食譜</h4>
                 <hr>
@@ -532,6 +555,7 @@
     <script src="https://kit.fontawesome.com/028aebd974.js " crossorigin="anonymous "></script>
     <script src="./scripts/nav.js "></script>
     <script src="./scripts/index.js"></script>
+    <script src="./scripts/search-recipe.js"></script>
 </body>
 
 </html>
