@@ -12,6 +12,8 @@
     <!-- 我們的Style -->
     <link rel="stylesheet" href="styles/basic.css">
     <link rel="stylesheet" href="styles/my-page.css">
+    <link rel="stylesheet" href="styles/recipe-list.css">
+    <link rel="stylesheet" href="styles/personal-page.css">
 
 </head>
 
@@ -247,7 +249,7 @@
             <div class="header">
                 <div class="d-flex align-items-center">
                     <span class="name">深夜熊貓</span>
-                    <button class="btn btn-primary btn-follow">追蹤</button>
+                    <button class="btn btn-primary btn-follow"><i class="fa-solid fa-pen fa-2xs"></i>   修改</button>
                 </div>
                 <div>
                     <span>3食譜</span>
@@ -258,8 +260,16 @@
                 </p>
             </div>
         </div>
+        <hr>
         <div class="row d-result">
             <div class="item d-flex">
+                <div class="dropdown action">
+                    <button class="action-btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false"></button>
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="#">修改</a></li>
+                        <li><a class="dropdown-item" href="#">刪除</a></li>
+                    </ul>
+                </div>
                 <img class="img-recipe" src=" https://tokyo-kitchen.icook.network/uploads/recipe/cover/391220/10efe01af11f3162.jpg " alt="食譜圖">
                 <div class="intro flex-fill">
                     <img class="img-author" src="./Images/core-images/profile.jpg " alt="作者頭貼">
@@ -282,6 +292,13 @@
 
             </div>
             <div class="item d-flex">
+                <div class="dropdown action">
+                    <button class="action-btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false"></button>
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="#">修改</a></li>
+                        <li><a class="dropdown-item" href="#">刪除</a></li>
+                    </ul>
+                </div>
                 <img class="img-recipe" src=" https://tokyo-kitchen.icook.network/uploads/recipe/cover/391220/10efe01af11f3162.jpg " alt="食譜圖 ">
                 <div class="intro flex-fill ">
                     <img class="img-author" src="./Images/core-images/profile.jpg" alt="作者頭貼">
